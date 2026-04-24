@@ -19,11 +19,42 @@ A high-performance, real-time messaging application inspired by WhatsApp. This p
 ## 📂 Project Structure
 ```text
 ├── Backend/
-│   ├── main.py          # FastAPI application & WebSocket logic
-│   ├── database.py      # SQLAlchemy/Database connection
-│   └── models.py        # PostgreSQL Data Models
-├── .env                 # Environment variables (Secrets)
-├── .gitignore           # Files to ignore in Git
-├── docker-compose.yml   # Multi-container orchestration
-├── Dockerfile           # Backend container definition
+│   └── main.py
+    └── chat.py
+    └── Contact.py
+    └── Login.py
+    └── Signup.py
+    └── Message.py
+    └── Websocket.py          
+├── Database
+    ├──Schema
+      └── Contacts.py
+      └── Messages.py
+      └── Users.py
+    └── Database.py
+├── Frontend
+    ├── Login
+      └── index.html
+      └── style.css
+      └── script.js
+    ├── Main
+      └── index.html
+      └── style.css
+      └── script.js
+      └── chat.js
+      └── contacts.js
+      └── socket.js
+    ├── Signup
+      └── index.html
+      └── style.css
+      └── script.js
+├── Model
+    └── ChatRequest.py
+    └── Contact.py
+    └── Login.py
+    └── Signup.py
+├── .env                
+├── .gitignore           
+├── docker-compose.yml   
+├── Dockerfile          
 └── README.md
