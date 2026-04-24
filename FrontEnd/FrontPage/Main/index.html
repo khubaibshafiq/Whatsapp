@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WhatsApp Clone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- ── TOP HEADER ── -->
+        <div class="header_portion">
+            <div class="profile">
+                <div class="profile-picp">
+                    <img
+                        class="profileimg"
+                        src="https://ui-avatars.com/api/?name=User&background=556b2f&color=fff"
+                        alt="Profile"
+                    >
+                </div>
+                <div class="name">
+                    <h3 class="name-head">Name</h3>
+                </div>
+                <div class="message-icon">
+                    <i class="fa fa-comment"></i>
+                </div>
+                <div class="setting">
+                    <i class="fa fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <div class="msg_status"></div>
+        </div>
+
+        <!-- ── LOWER SECTION ── -->
+        <div class="lower_portion">
+
+            <!-- LEFT: Contact list -->
+            <div class="chat_list">
+                <!-- contacts.js yahan contacts inject karega, including search + add btn -->
+            </div>
+
+            <!-- RIGHT: Chat screen -->
+            <div class="msg_screen" id="msg_screen">
+
+                <!-- Empty state — koi contact select nahi -->
+                <div class="empty-state" id="emptyState">
+                    <i class="fa fa-comments empty-icon"></i>
+                    <p>Koi contact click karo aur chat shuru karo</p>
+                </div>
+
+                <!-- Chat area — default hidden, tab dikhe jab contact click ho -->
+                <div class="chat-area" id="chatArea" style="display:none;">
+
+                    <!-- Chat ke upar naam -->
+                    <div class="chat-top">
+                        <h3 id="chatName">—</h3>
+                    </div>
+
+                    <!-- Messages yahan aayenge -->
+                    <div id="messagesArea" class="messages"></div>
+
+                    <!-- Message type karo aur bhejo -->
+                    <div class="input-bar">
+                        <input
+                            type="text"
+                            id="msgInput"
+                            placeholder="Type a message..."
+                            autocomplete="off"
+                        >
+                        <button onclick="sendMsg()">
+                            <i class="fa fa-send"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ── ADD CONTACT MODAL ── -->
+    <div id="addContactModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <h3>Add Contact</h3>
+            <p>Dost ka username daalo</p>
+            <input
+                type="text"
+                id="contactNameInput"
+                placeholder="Username..."
+                autocomplete="off"
+            >
+            <div class="modal-buttons">
+                <button class="btn-save"   onclick="addContact()">Save</button>
+                <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
